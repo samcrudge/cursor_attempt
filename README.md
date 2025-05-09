@@ -1,5 +1,69 @@
 # Event Streaming Application
 
+
+### Challenge Prompt done via Cursor
+```
+Challenge Description
+
+Task: Implement a simplified, event-driven streaming application with the following functionality…
+
+HTTP API endpoint to accept incoming events (REST or gRPC optional).
+
+Each event contains:
+
+ID (string)
+
+Timestamp (int64, Unix timestamp)
+
+Payload (string)
+
+Store events in memory safely for concurrent use.
+
+Background worker(s) concurrently consume events, apply a simple transformation (e.g., uppercase payload, add metadata), and "publish" transformed events.
+
+Publish by printing to stdout, logging, or simulating Pub/Sub via channels.
+
+Demonstrate graceful shutdown (clean shutdown upon interrupt).
+
+Bonus Points
+
+These areas are optional and intended to show deeper understanding and broader perspective. The more the candidate get through them, the merrier, as they can help us differentiate between strong and excellent candidates.
+
+1. Written, Working Tests:
+
+Meaningful unit tests verifying core logic (event handling, API endpoints, data transformations, concurrency handling).
+
+2. Infrastructure & Hosting Considerations (AWS):
+
+In your README, briefly describe how you'd deploy this app using AWS infrastructure (no actual deployment required).
+
+Include:
+
+AWS services you would consider (e.g., ECS/EKS, Fargate, EC2, Lambda, DynamoDB, RDS, API Gateway, ELB).
+
+How you'd manage scaling, high availability, and fault tolerance.
+
+Deployment strategies (CI/CD, IaC tools like Terraform or CloudFormation).
+
+3. Showcase System Under Stress/Load:
+
+Briefly demonstrate or describe how your app performs under high volumes of incoming events:
+
+What do you expect to be the bottlenecks or breaking points?
+
+Have you considered how your choice of concurrency strategy affects performance under load?
+
+What adjustments would you recommend to handle significantly increased event throughput?
+
+4. Observability & Monitoring Considerations:
+
+Explain in your README how you'd add observability to your system:
+
+Logging strategy, metrics you'd track, monitoring and alerting systems (e.g., Prometheus, CloudWatch, Grafana).
+
+Brief explanation of how you'd debug or troubleshoot issues in production.
+```
+
 A concurrent event-driven streaming application that accepts events via HTTP, processes them with background workers, and publishes transformed events.
 
 ## Features
